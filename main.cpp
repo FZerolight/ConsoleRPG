@@ -40,6 +40,5 @@ int main()
     pMainChar->addHP(-200);
     Sleep(2000);
     pRec->Use(pMainChar);
-
     return 0;
 }

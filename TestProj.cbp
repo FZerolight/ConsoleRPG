@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Backpack.cpp" />
 		<Unit filename="Backpack.h" />
 		<Unit filename="Common.h" />
 		<Unit filename="Item.h" />

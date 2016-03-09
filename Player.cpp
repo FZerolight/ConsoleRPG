@@ -23,6 +23,7 @@ Player::Player(string PN,
     this->MPFunc = MPF;
     this->ExpNextFunc = NEF;
     this->ExpNext = this->ExpNextFunc(this->Level);
+    PlayerBag = new Backpack();
     cout << "Welcome, " << this->PlayerName << "!" << endl;
     cout << this;
 }

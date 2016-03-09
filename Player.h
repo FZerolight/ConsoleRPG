@@ -4,8 +4,8 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "Backpack.h"
 
-class ItemBase;
 class Player
 {
 private:
@@ -22,6 +22,8 @@ private:
     int (*HPFunc)(int);
     int (*MPFunc)(int);
     long (*ExpNextFunc)(int);
+
+    Backpack* PlayerBag;
 
 public:
     Player(std::string PlayerName,

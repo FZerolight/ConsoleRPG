@@ -56,5 +56,6 @@ ostream& operator<<(ostream & s, HealthPotion* obj)
 {
     s << "ItemID:" << obj->getItemID() << endl;
     s << "ItemName:" << obj->getItemName() << endl;
+    s << "MaxCarried:" << obj->MaxCarried << endl;
     return s;
 }

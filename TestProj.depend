@@ -1,28 +1,29 @@
 # depslib dependency file v1.0
-1457107000 source:c:\users\fzerolight\documents\cbproj\testproj\main.cpp
+1457490110 source:c:\users\fzerolight\documents\cbproj\testproj\main.cpp
 	<iostream>
-	"Item.h"
 	<windows.h>
+	"Item.h"
+	"Player.h"
 
-1457138148 source:c:\users\fzerolight\documents\cbproj\testproj\item.cpp
+1457490149 source:c:\users\fzerolight\documents\cbproj\testproj\item.cpp
 	"Item.h"
 	"Player.h"
 	"Common.h"
 	<iostream>
 
-1457138112 c:\users\fzerolight\documents\cbproj\testproj\item.h
+1457138507 c:\users\fzerolight\documents\cbproj\testproj\item.h
 	<string>
 	<iostream>
+	"Player.h"
 
-1457138052 c:\users\fzerolight\documents\cbproj\testproj\player.h
+1457138460 c:\users\fzerolight\documents\cbproj\testproj\player.h
 	<string>
 	<vector>
 	<iostream>
-	"Item.h"
 
 1457091921 c:\users\fzerolight\documents\cbproj\testproj\common.h
 
-1457106395 source:c:\users\fzerolight\documents\cbproj\testproj\player.cpp
+1457138475 source:c:\users\fzerolight\documents\cbproj\testproj\player.cpp
 	"Player.h"
 	<iostream>
 
