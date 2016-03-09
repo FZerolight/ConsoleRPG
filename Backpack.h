@@ -7,7 +7,7 @@
 
 struct BagSlot
 {
-    ItemBase* item;
+    ItemBase* Item;
     int Num;
 };
 
@@ -25,10 +25,11 @@ public:
     ~Backpack();
     bool add(BagSlot item);
     std::string getLog();
-    void SortBag();
+    //void SortBag();
     friend std::ostream& operator<< (std::ostream& s, Backpack* obj);
-    BagSlot operator[] (int index);
-    BagSlot operator[] (std::string key);
+    //BagSlot operator[](int index);
+    BagSlot getItem(int index);
+    //BagSlot operator[] (std::string key);
 
 };
 #endif // __BACKPACK_H__

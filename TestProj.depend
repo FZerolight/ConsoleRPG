@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1457490110 source:c:\users\fzerolight\documents\cbproj\testproj\main.cpp
+1457527635 source:c:\users\fzerolight\documents\cbproj\testproj\main.cpp
 	<iostream>
 	<windows.h>
 	"Item.h"
 	"Player.h"
+	"Backpack.h"
 
 1457490149 source:c:\users\fzerolight\documents\cbproj\testproj\item.cpp
 	"Item.h"
@@ -11,19 +12,30 @@
 	"Common.h"
 	<iostream>
 
-1457138507 c:\users\fzerolight\documents\cbproj\testproj\item.h
+1457525458 c:\users\fzerolight\documents\cbproj\testproj\item.h
 	<string>
 	<iostream>
 	"Player.h"
 
-1457138460 c:\users\fzerolight\documents\cbproj\testproj\player.h
+1457529211 c:\users\fzerolight\documents\cbproj\testproj\player.h
 	<string>
 	<vector>
 	<iostream>
 
 1457091921 c:\users\fzerolight\documents\cbproj\testproj\common.h
 
-1457138475 source:c:\users\fzerolight\documents\cbproj\testproj\player.cpp
+1457529232 source:c:\users\fzerolight\documents\cbproj\testproj\player.cpp
 	"Player.h"
 	<iostream>
+	"Backpack.h"
+
+1457527627 c:\users\fzerolight\documents\cbproj\testproj\backpack.h
+	<vector>
+	<string>
+	"Item.h"
+
+1457527709 source:c:\users\fzerolight\documents\cbproj\testproj\backpack.cpp
+	"Backpack.h"
+	"Common.h"
+	<algorithm>
 

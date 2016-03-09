@@ -4,7 +4,10 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "Backpack.h"
+//#include "Backpack.h"
+
+class Backpack;
+class ItemBase;
 
 class Player
 {
@@ -22,7 +25,6 @@ private:
     int (*HPFunc)(int);
     int (*MPFunc)(int);
     long (*ExpNextFunc)(int);
-
     Backpack* PlayerBag;
 
 public:
@@ -51,9 +53,8 @@ public:
     void addMP(int val);
     void setMP(int val);
 
-    void ShowBag();
-    ItemBase* getItemByID(int id);
-
+    void addItem(ItemBase* item, int num);
+    void showBag();
 
     friend std::ostream& operator<<(std::ostream& s, Player* obj);
 

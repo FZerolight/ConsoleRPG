@@ -2,6 +2,7 @@
 #include <windows.h>
 #include "Item.h"
 #include "Player.h"
+#include "Backpack.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ long PExpNext(int lvl)
 int main()
 {
     //cout <<"Welcome to the Game World!"<<endl;
-    Sleep(2000);
+    //Sleep(2000);
     Player* pMainChar = new Player("Mikoto Misaka",
                                 100,
                                 100,
@@ -32,13 +33,14 @@ int main()
                                 PMPNext,
                                 PExpNext);
     HealthPotion* pRec = new HealthPotion(100);
+    pMainChar->addItem(pRec,2);
+    pMainChar->showBag();
     Sleep(1000);
     cout << pRec << endl;
-    Sleep(2000);
+    Sleep(1000);
     pMainChar->GainExp(2000);
     Sleep(1000);
     pMainChar->addHP(-200);
-    Sleep(2000);
-    pRec->Use(pMainChar);
+    Sleep(1000);
     return 0;
 }

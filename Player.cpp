@@ -1,5 +1,6 @@
 #include "Player.h"
 #include <iostream>
+#include "Backpack.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ Player::Player(string PN,
     this->MPFunc = MPF;
     this->ExpNextFunc = NEF;
     this->ExpNext = this->ExpNextFunc(this->Level);
-    PlayerBag = new Backpack();
+    PlayerBag = new Backpack(99);
     cout << "Welcome, " << this->PlayerName << "!" << endl;
     cout << this;
 }
@@ -151,6 +152,31 @@ void Player::setMP(int val)
         MP = MPMax;
     }
     cout << PlayerName << "'s MP has been set to " << HP << endl;
+}
+
+void Player::addItem(ItemBase* item, int num)
+{
+    BagSlot bs;
+    bs.Item = item;
+    bs.Num = num;
+    if (PlayerBag->add(bs))
+    {
+        cout << "Player " << PlayerName << "has get " << num << " " << item->getItemName();
+        if (num > 1)
+        {
+            cout << "s";
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << PlayerBag->getLog();
+    }
+}
+
+void Player::showBag()
+{
+    cout << PlayerBag << endl;
 }
 
 ostream& operator<<(std::ostream& s, Player* obj)

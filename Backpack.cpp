@@ -1,4 +1,6 @@
 #include "Backpack.h"
+#include "Common.h"
+#include <algorithm>
 
 using namespace std;
 
@@ -7,6 +9,7 @@ Backpack::Backpack(int maxslot)
     this->MaxSlot = maxslot;
     this->ErrorLog = "All Green";
     this->container = new vector<BagSlot>();
+    cout << "A backpack is created" << endl;
 }
 
 Backpack::~Backpack()
@@ -34,10 +37,10 @@ string Backpack::getLog()
     return ErrorLog;
 }
 
-void Backpack::SortBag()
+/*void Backpack::SortBag()
 {
-    sort(container->begin(), container->end(), this->_sortbyitemid);
-}
+    std::sort((*container).begin(), (*container).end(), this->_sortbyitemid);
+}*/
 
 bool Backpack::_sortbyitemid(const BagSlot& v1, const BagSlot& v2)
 {
@@ -46,9 +49,52 @@ bool Backpack::_sortbyitemid(const BagSlot& v1, const BagSlot& v2)
 
 ostream& operator<< (ostream& s, Backpack* obj)
 {
-    s << "==========Backpack==========" << endl;
-    for (BagSlot i:obj->container)
+    if (obj->container->empty())
     {
-        cout << i.item << endl;
+        s << "The backpack is empty" << endl;
     }
+    else
+    {
+        s << "==========Backpack==========" << endl;
+        for (BagSlot i:(*(obj->container)))
+        {
+            switch (i.Item->getItemID())
+            {
+            case Item_HP:
+                {
+                    auto output = (HealthPotion*)(i.Item);
+                    s << output << endl;
+                    break;
+                }
+
+            default:
+                {
+                    s << "Unknown Item" << endl;
+                    break;
+                }
+            }
+        }
+        s << "=============End============" << endl;
+    }
+    return s;
 }
+
+/*BagSlot Backpack::operator[](int index)
+{
+    return (*container)[index];
+}*/
+
+BagSlot Backpack::getItem(int index)
+{
+    auto item = (*container)[index];
+}
+
+
+
+
+
+
+
+
+
+
