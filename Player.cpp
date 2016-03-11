@@ -1,6 +1,7 @@
 #include "Player.h"
 #include <iostream>
 #include "Backpack.h"
+#include "Common.h"
 
 using namespace std;
 
@@ -25,6 +26,13 @@ Player::Player(string PN,
     this->ExpNextFunc = NEF;
     this->ExpNext = this->ExpNextFunc(this->Level);
     PlayerBag = new Backpack(99);
+
+    Attributes[ATK] = 20;
+    Attributes[DEF] = 10;
+    Attributes[STR] = 10;
+    Attributes[INT] = 10;
+    Attributes[AGL] = 10;
+
     cout << "Welcome, " << this->PlayerName << "!" << endl;
     cout << this;
 }

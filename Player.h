@@ -22,10 +22,14 @@ private:
     long Exp;
     long ExpNext;
 
+    int Attributes[5];
+    std::vector<Buff>* vBuff;
+
     int (*HPFunc)(int);
     int (*MPFunc)(int);
     long (*ExpNextFunc)(int);
     Backpack* PlayerBag;
+
 
 public:
     Player(std::string PlayerName,
@@ -53,11 +57,28 @@ public:
     void addMP(int val);
     void setMP(int val);
 
-    void addItem(ItemBase* item, int num);
+    void setBuff(int atr, int val);
+
+    void addItem(ItemBase* item, int num, int duration);
     void showBag();
+
+    void update();
 
     friend std::ostream& operator<<(std::ostream& s, Player* obj);
 
+};
+
+class Buff
+{
+private:
+    int duration;
+    int atr;
+    int val;
+
+public:
+    Buff();
+    ~Buff();
+    update();
 };
 
 #endif // __PLAYER_H__
