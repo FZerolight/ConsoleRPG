@@ -36,4 +36,17 @@ public:
 
 };
 
+class Abrakadabra : public ItemBase
+{
+private:
+    int duration;
+
+public:
+    Abrakadabra();
+    ~Abrakadabra();
+
+    void update();
+    void Use(Player* player);
+    void Destroy();
+};
 #endif // _ITEM_H__
